@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Layout 4</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        #maindiv{
+        
+        width:60%;
+        margin: auto;
+     }
+        #toplayer{
+        margin-top: 10px;
+        width: 100%;
+        min-height: 30px;
+        line-height: 30px;
+        background-color:"";
+        display: flex;
+        box-sizing: border-box;
+        
+     }
+     #p1{
+        width: 50%;
+       background-color: lightgray;
+       min-height: 10px;
+       text-align: left;
+       padding-left: 15px;
+     }
+     #p2{
+        width: 50%;
+       background-color: lightgray;
+       min-height: 10px;
+       text-align: right;
+       padding-right: 15px;
+     }
+     #parent{
+        margin-top: 10px;
+        width: 100%;
+        min-height: 100px;
+        background-color:"";
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+     }
+     .box{
+       width:20%;
+       background-color: lightgray;
+       min-height: 100px;
+     }
+     #parent2{
+        margin-top: 10px;
+        width: 100%;
+        min-height: 100px;
+        background-color:"";
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+     }
+     .boxarea{
+        width:30%;
+       background-color: lightgray;
+       min-height: 100px;
+       line-height: 100px;
+       text-align: center;
+     }
+     #footer{
+        margin-top: 10px;
+        background-color: lightgray;
+        min-height: 30px;
+        line-height: 30px;
+        text-align: center;
+     }
+    </style>
+</head>
+<body>
+<div id="maindiv">
+<div id="toplayer">
+     <p id="p1">Logo</p>
+     <p id="p2">Navigation</p>
+</div>
+<div id="parent">
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<div id="parent">
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<div id="parent">
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div id="parent">
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<div id="parent2">
+    <div class="boxarea">Box1</div>
+    <div class="boxarea">Box2</div>
+    <div class="boxarea">Box3</div>
+</div>
+<div id="footer">Footer</div>
+</div>
+</body>
+</html>
