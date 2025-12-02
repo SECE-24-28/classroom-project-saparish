@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head><title>Layout 3</title>
+<style>
+
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#maindiv{
+        
+        width:70%;
+        margin: auto;
+     }
+#logodiv{
+    width:100%;
+    background-color: lightgray;
+    min-height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+}
+#parent{
+        margin-top: 10px;
+        width: 100%;
+        min-height: 500px;
+        background-color:white;
+        display: flex;
+        
+        justify-content: space-between;
+     }
+     #child1{
+       width:30%;
+       background-color: lightgray;
+       min-height: 500px;
+     }
+     #child2{
+         width:65%;
+         display: flex;
+         box-sizing: border-box;
+       background-color:"";
+       min-height: 500px;
+       flex-direction: column;
+     }
+     #p1{
+        width:100%;
+        background-color: lightgray;
+        min-height: 100px;
+        line-height: 100px;
+        text-align: center;
+        margin-bottom: 10px;
+     }
+     #p2{
+        width:100%;
+        background-color: lightgray;
+        min-height: 400px;
+        text-align: center;
+        line-height: 400px;
+        
+     }#footer{
+        margin-top: 10px;
+        background-color: lightgray;
+        min-height: 30px;
+        line-height: 30px;
+        text-align: center;
+     }
+</style>
+</head>
+<body>
+<div id="maindiv">
+    <div id="logodiv">Logo</div>
+    
+    <div id="parent">
+    <div id="child1">Side Bar</div>
+    <div id="child2">
+        <p id="p1">Header</p>
+        <p id="p2">body area</p>
+    </div>
+    </div>
+    <div id="footer">Footer</div>
+</div>
+</body>
+</html>
