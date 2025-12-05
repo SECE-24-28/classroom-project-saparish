@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> validation </title>
+<style >
+ *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+#maindiv{
+        width:70%;
+        margin: auto;
+     }
+
+#st{
+text-align:center;
+background-color:lightblue;
+width:100%;
+min-height:30px;
+line-height:30px;
+}
+</style>
+</head>
+<body>
+<form action="check.html" method="get" onsubmit="return validate()">
+<div id="maindiv"> 
+<div id="st">
+
+Enter the Name:<input type="text" id="tn" name="tname">
+<span id="stn"></span><br><br>
+
+Enter the password:<input type="password" id="tp" name="pass">
+<span id="spass"></span><br><br>
+
+Enter the ConfirmPassword:<input type="password" id="tc" name="con">
+<span id="cpass"></span><br><br>
+
+Choose the Gender: 
+Male <input type="radio" value="m" id="mr" name="gender">
+Female <input type="radio" value="f" id="fr" name="gender">
+<span id="sg"></span><br><br>
+
+<select id="course" name="coursename">
+<option value="-1">------Select Course---------</option>
+<option value="c">C Language </option>
+<option value="p">Python Language </option>
+<option value="C++">C++ Language </option>
+</select>
+<span id="sc"></span><br><br>
+
+<input type="submit" value="Click">
+
+</div>
+</div>
+</form>
+
+
+<script type="text/javascript">
+function validate()
+{
+    let isTxtname = true;
+    let isTxtpass = true;
+    let valid = true;
+
+    /* ------------------ NAME ------------------ */
+    if(document.getElementById("tn").value === "")
+    {
+        document.getElementById("stn").innerHTML = "Enter the name";
+        document.getElementById("stn").style.color = "red";
+        isTxtname = false;
+        valid = false;
+    }
+    else
+    {
+        document.getElementById("stn").innerHTML = "valid";
+        document.getElementById("stn").style.color = "green";
+    }
+
+    /* ---------------- PASSWORD ---------------- */
+    let pass = document.getElementById("tp").value;
+
+    if(pass === "")
+    {
+        document.getElementById("spass").innerHTML = "Enter the password";
+        document.getElementById("spass").style.color = "red";
+        isTxtpass = false;
+        valid = false;
+    }
+    else
+    {
+        document.getElementById("spass").innerHTML = "valid";
+        document.getElementById("spass").style.color = "green";
+    }
+
+    /* ------------ CONFIRM PASSWORD ------------ */
+    let cpass = document.getElementById("tc").value;
+
+    if(cpass === "")
+    {
+        document.getElementById("cpass").innerHTML = "Enter confirm password";
+        document.getElementById("cpass").style.color = "red";
+        valid = false;
+    }
+    else if(cpass !== pass)
+    {
+        document.getElementById("cpass").innerHTML = "Password not match";
+        document.getElementById("cpass").style.color = "red";
+        valid = false;
+    }
+    else
+    {
+        document.getElementById("cpass").innerHTML = "Match";
+        document.getElementById("cpass").style.color = "green";
+    }
+
+    /* ------------------ GENDER ------------------ */
+    let male = document.getElementById("mr").checked;
+    let female = document.getElementById("fr").checked;
+
+    if(!male && !female)
+    {
+        document.getElementById("sg").innerHTML = "Select gender";
+        document.getElementById("sg").style.color = "red";
+        valid = false;
+    }
+    else
+    {
+        document.getElementById("sg").innerHTML = "Selected";
+        document.getElementById("sg").style.color = "green";
+    }
+
+    /* ------------------ COURSE ------------------ */
+    let course = document.getElementById("course").value;
+
+    if(course === "-1")
+    {
+        document.getElementById("sc").innerHTML = "Select course";
+        document.getElementById("sc").style.color = "red";
+        valid = false;
+    }
+    else
+    {
+        document.getElementById("sc").innerHTML = "Selected";
+        document.getElementById("sc").style.color = "green";
+    }
+
+
+    return valid;   // one final return
+}
+</script>
+
+</body>
+</html>
