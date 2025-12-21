@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | MyApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
+        <h1 class="text-2xl font-bold dark:text-white">MyApp</h1>
+
+        <div class="flex items-center gap-4">
+            <a href="login.html" class="text-lg dark:text-gray-300">Login</a>
+            <button id="toggleDark" class="px-3 py-2 bg-black text-white rounded 
+        dark:bg-white dark:text-black">
+                Dark Mode
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center p-10">
+        <h1 class="text-4xl font-bold mb-4">Welcome to MyApp</h1>
+        <p class="text-lg mb-6">A responsive Tailwind website with dark mode support.</p>
+
+        <a href="dashboard.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+            Go to Dashboard
+        </a>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

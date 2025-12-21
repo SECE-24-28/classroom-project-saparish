@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MyApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
+        <h1 class="text-2xl font-bold dark:text-white">Dashboard</h1>
+
+        <div class="flex gap-4 items-center">
+            <a href="index.html" class="text-lg dark:text-gray-300">Home</a>
+            <button id="toggleDark" class="px-3 py-2 bg-black text-white rounded 
+        dark:bg-white dark:text-black">
+                Dark Mode
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dashboard Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+            <h3 class="text-xl font-semibold mb-2">Users</h3>
+            <p class="text-gray-700 dark:text-gray-300">120 Active Users</p>
+        </div>
+
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+            <h3 class="text-xl font-semibold mb-2">Sales</h3>
+            <p class="text-gray-700 dark:text-gray-300">$5,200 Today</p>
+        </div>
+
+        <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+            <h3 class="text-xl font-semibold mb-2">Orders</h3>
+            <p class="text-gray-700 dark:text-gray-300">76 New Orders</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
